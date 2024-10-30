@@ -15,7 +15,7 @@
 /cache
 /installation/cache
 /tmp
-/configuration.php
+/configuration*.php
 /.htaccess
 /web.config
 /.php-cs-fixer.cache

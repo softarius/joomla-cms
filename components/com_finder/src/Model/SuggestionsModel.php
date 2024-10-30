@@ -94,8 +94,9 @@ class SuggestionsModel extends ListModel
 
         // Select required fields
         $termQuery->select('DISTINCT(t.term)')
+            ->select('t.links, t.weight')
             ->from($db->quoteName('#__finder_terms', 't'))
-            ->whereIn('t.term_id', $termIds)
+            ->where('t.term_id in ('. implode(',', $termIds).')')
             ->order('t.links DESC')
             ->order('t.weight DESC');
 
