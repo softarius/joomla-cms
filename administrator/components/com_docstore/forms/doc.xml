@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="Softarius\Component\Docstore\Administrator\Field">
+  <fieldset name='common' label="COM_DOCSTORE_DOC_COMMON">
+    <field name="id" type="hidden" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+
+    <field name="name" filter="safehtml" type="text" 
+   
+    label="COM_DOCSTORE_DOC_LABEL_NAME" 
+    description="COM_DOCSTORE_FORM_DESC_DOC_NAME" 
+    hint="COM_DOCSTORE_FORM_LBL_DOC_NAME"/>
+
+	<field
+			name="content"
+			type="file"
+			label='COM_DOCSTORE_DOCFILE_LABEL'
+			accept=".pdf"
+			description='COM_DOCSTORE_DOCFILE_DESC'
+	/>
+
+
+
+
+	
+
+    <field
+			name="catid"
+			default=""
+			required='1'
+			type="category"
+			extension='com_docstore'
+			label="COM_DOCSTORE_CATEGORY_LABEL"
+			description="COM_DOCSTORE_CATEGORY_DESC"
+	/>
+
+	
+
+	<field 
+		name='fulltext' 
+		type='textarea' 
+		label='COM_DOCSTORE_FULLTEXT_LABEL'
+		description="COM_DOCSTORE_FULLTEXT_DESCRIPTION"
+		filter='raw'
+		rows="6"
+	/>
+	
+  </fieldset>
+  <fieldset name='doc' label="COM_DOCSTORE_DOC_PROPS">
+    <field name='version' label="COM_DOCSTORE_VERSION_LABEL">
+	</field>	
+	
+	<field name='docdate' label="COM_DOCSTORE_DOCDATE_LABEL" type='calendar'/>
+	<field name="srcurl" label="COM_DOCSTORE_SRCURL_LABEL"/>
+
+	<field 
+		name='publish_up' 
+		type='calendar' 
+		required='1'
+		label='COM_DOCSTORE_PUBLISH_UP_LABEL'
+		description="COM_DOCSTORE_PUBLISH_UP_DESCRIPTION"
+		format="%Y-%m-%d %H:%M:%S"
+		default="NOW"
+		
+		showtime='true'
+	/>
+	
+
+	<field 
+		name='publish_down' 
+		type='calendar' 
+		label='COM_DOCSTORE_PUBLISH_DOWN_LABEL'
+		description="COM_DOCSTORE_PUBLISH_DOWN_DESCRIPTION"
+		format="%Y-%m-%d %H:%M:%S"
+		showtime='true'
+	/>
+  </fieldset>
+</form>

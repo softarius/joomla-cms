@@ -84,7 +84,7 @@ class SuggestionsModel extends ListModel
             ->where('ti.language IN (' . $db->quote($lang) . ', ' . $db->quote('*') . ')')
             ->order('ti.links DESC')
             ->order('ti.weight DESC');
-
+            echo $termIdQuery;
         $termIds = $db->setQuery($termIdQuery, 0, 100)->loadColumn();
 
         // Early return on term mismatch

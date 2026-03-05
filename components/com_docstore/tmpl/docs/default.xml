@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_DOCSTORE_TITLE_LIST_VIEW_DOCS" option="View">
+        <message>
+                        <![CDATA[COM_DOCSTORE_TITLE_LIST_VIEW_DOCS_DESC]]>
+        </message>
+	</layout>
+
+      	<fields name="params">
+
+		<!-- Basic options. -->
+		<fieldset name="basic"
+			label="COM_DOCSTORE_SETTINGS_LABEL">
+
+		<field
+			name="catid"
+			default=""
+			required=''
+			type="category"
+			extension='com_docstore'
+			label="COM_DOCSTORE_CATEGORY_LABEL"
+			description="COM_DOCSTORE_CATEGORY_DESC"
+		 />
+		</fieldset>
+	</fields>
+
+	
+</metadata>
